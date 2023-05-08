@@ -1,0 +1,104 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family : 'EB Garamond', serif;
+  font-size: 1.2rem;
+}
+.container{
+    min-height: 100vh;
+    display : flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    /* background: linear-gradient(to right, #8F9779, #FFFFFF); */
+    /* background: linear-gradient(to right, #F5DEB3, #E4C58C); */
+
+    /* background: linear-gradient(to right, #8F9779, #6B7D6B); */
+
+    /* background: radial-gradient(circle, #D2B48C, #9B938F); */
+    /* background: linear-gradient(to right, #7D6608, #D2B48C); */
+    background: linear-gradient(to right, #3c1111, #d38484);
+    /* background: radial-gradient(circle, #726660, #333333); */
+
+
+
+
+
+
+
+
+}
+.left-text{
+    flex-basis: 30%;
+}
+
+.heading{
+    font-size: 3rem ;
+    color: #ffffff ;
+    text-align: center;
+}
+.para{
+    color: rgb(228, 225, 225);
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.gallery{
+    flex-basis: 50%;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+}
+.box{
+    background-size: cover;
+    background-position: top;
+    color: rgb(236, 244, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode:hard-light;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+.box:hover{
+    background-position: center;
+    background-color: #999;
+    box-shadow: 0 0 4px #fff;
+}
+.col-2{
+    grid-column: span 2;
+}
+.row-2{
+    grid-row: span 2;
+}
+.row-3{
+    grid-row: span 3;
+}
+
+
+@media screen and (max-width: 1024px){
+    .container{
+        flex-direction: column;
+        padding-block: 20px;
+    }
+    .gallery{
+       
+           width: 100%;
+           padding-inline: 12px;
+           grid-auto-rows : 220px;
+          }
+          .box{
+            grid-column: span 3;
+            grid-row: span 1;
+          }
+ }
+
